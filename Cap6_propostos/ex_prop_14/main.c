@@ -12,7 +12,7 @@ de notas:
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 3
+#define TAM 6
 
 int main(int argc, char** argv) {
     char nome[TAM][40];
