@@ -42,10 +42,10 @@ int main(int argc, char** argv) {
             printf("\tSituação: Aprovado. \n");
             cont_aprovado++;
         } else if (media_aluno >= 4 && media_aluno < 7) {
-            printf("\tAluno reprovado. \n");
+            printf("\tAluno em exame. \n");
             cont_reprovado++;
         } else {
-            printf("\tAluno em exame. \n");
+            printf("\tAluno reprovado. \n");
             cont_exame++;
         }
 
@@ -76,8 +76,8 @@ int main(int argc, char** argv) {
     } else {
         printf("Nenhum aluno reprovado. \n");
     }
-
+    
+    printf("A média da classe será de %.2f pontos. \n",media_classe = soma_classe / TAM);
 
     return (EXIT_SUCCESS);
 }
-
