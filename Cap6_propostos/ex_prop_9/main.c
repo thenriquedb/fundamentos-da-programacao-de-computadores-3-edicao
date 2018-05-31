@@ -12,7 +12,7 @@ de 15%; e para aqueles que satisfazem apenas a condição de preço, o aumento s
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 3
+#define TAM 10
 
 int main(int argc, char** argv) {
     char nome[TAM][40];
