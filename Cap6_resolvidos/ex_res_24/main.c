@@ -29,7 +29,6 @@ int main(int argc, char** argv) {
             printf("\tNúmero %d se repte %d vezes. \n", a[i], cont);
         }
     }
-
     return (EXIT_SUCCESS);
 }
 
