@@ -12,7 +12,7 @@ condição salário, o aumento será de 15%.
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 3
+#define TAM 5
 
 int main(int argc, char** argv) {
     char nome[TAM][40];
