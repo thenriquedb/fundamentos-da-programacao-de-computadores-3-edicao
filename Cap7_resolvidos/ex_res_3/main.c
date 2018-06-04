@@ -10,8 +10,8 @@ ultrapasse R$ 120,00.
 
 #include <stdio.h>
 #include <stdlib.h>
-#define QUANT_LOJA 2 // Linha da matriz
-#define QUANT_PRODUTO 2 // Colunas da matriz
+#define QUANT_LOJA 8 // Linha da matriz
+#define QUANT_PRODUTO 4 // Colunas da matriz
 
 int main(int argc, char** argv) {
     char nomeLoja[QUANT_LOJA][40], nomeProduto[QUANT_PRODUTO][40];
@@ -38,6 +38,7 @@ int main(int argc, char** argv) {
     printf("Lojas em que o produto não ultrapasse R$ 120.00: \n");
     for (i = 0; i < QUANT_LOJA; i++) {
         for (j = 0; j < QUANT_PRODUTO; j++) {
+            //Verificar se o o preço é inferior ou igual a R$ 120.00
             if (preco[i][j] <= 120) {
                 printf("\tNome da loja: %s \n", nomeLoja[i]);
                 printf("\tNome do produto: %s \n", nomeProduto[i]);
