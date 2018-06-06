@@ -10,7 +10,7 @@ elemento da matriz pela soma da linha correspondente e mostrar a matriz resultan
 #define COL 20
 
 int main(int argc, char** argv) {
-    int matriz[LIN][COL], soma[LIN];
+    int matriz[LIN][COL], soma[LIN], mult[LIN];
     int i, j, p = 0;
 
     //Leitura dos números digitados
@@ -23,15 +23,26 @@ int main(int argc, char** argv) {
 
     //Laço que fará a soma das linhas
     for (i = 0; i < LIN; i++) {
+
+        soma[p] = 0;
+
+        //Soma dos elementos da  mes1ma linha
         for (j = 0; j < COL; j++) {
             soma[p] += matriz[i][j];
         }
         p++; //A cada laço o vetor soma pulara de posição
     }
 
-    printf("\nSoma das linhas: \n");
     for (i = 0; i < LIN; i++) {
-        printf("\tSoma %dº linha: %d \n", i + 1, soma[i]);
+        printf("\n%dº Linha \n", i + 1);
+        printf("\tSoma: %d \n", soma[i]);
+        
+        //Laço que fará a multiplicação de cada elemento pela soma da linha
+        for (j = 0; j < COL; j++) {
+            mult[i] = soma[i] * matriz[i][j];
+            printf("\tMultplicação [%d][%d] =  %d \n", i, j, mult[i]);
+
+        }
     }
 
     return (EXIT_SUCCESS);
