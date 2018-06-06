@@ -33,7 +33,6 @@ int main(int argc, char** argv) {
             printf("\tR[%d][%d] = %d \n", i, j, R[i][j]);
         }
     }
-
     return (EXIT_SUCCESS);
 }
 
