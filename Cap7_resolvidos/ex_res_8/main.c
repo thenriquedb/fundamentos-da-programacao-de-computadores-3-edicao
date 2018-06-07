@@ -6,8 +6,8 @@ tos diferentes de 30. No lugar do número 30, da segunda matriz, coloque o núme
 
 #include <stdio.h>
 #include <stdlib.h>
-#define L 4
-#define C 2
+#define L 6
+#define C 4
 
 int main(int argc, char** argv) {
     int matriz[L][C], mat2[L][C];
