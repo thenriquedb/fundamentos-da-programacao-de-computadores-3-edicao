@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
                 mat2[i][j] = 0; //Os valores de MAT 2 serão atribuidos nas mesma posições que na 1º matriz
             }
 
-                //Se for menor que 30 será adicionado na segunda 2º Matriz
+            //Se for menor que 30 será adicionado na segunda 2º Matriz
             else if (matriz[i][j] < 30) {
                 mat2[i][j] = matriz[i][j];
             } else {
