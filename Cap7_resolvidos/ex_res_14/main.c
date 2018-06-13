@@ -67,7 +67,6 @@ int main(int argc, char** argv) {
 
     //Output
     printf("\n---------------------------RELATÓRIO---------------------------\n");
-    j = 0;
     for (i = 0; i < T; i++) {
         for (j = 0; j < T; j++) {
             if (i != j) {
