@@ -175,7 +175,6 @@ int main(int argc, char** argv) {
         }
     }
 
-
     for (i = 0; i < L; i++) {
         cont = 0;
         for (j = 0; j < C; j++) {
