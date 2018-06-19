@@ -78,7 +78,6 @@ int main(int argc, char** argv) {
                     printf("Gasto de combustivel: %.2f L. \n", consumo[i]);
                 }
             }
-
         }
     }
 
