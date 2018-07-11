@@ -8,17 +8,20 @@ for negativo.
 
 int verificar_num(int x) {
     if (x > 0) {
-        printf("1 \n");
+        return 1;
     } else {
-        printf("0 \n");
+        return 0;
     }
-}
+0}
 
 int main(int argc, char** argv) {
-    int num;
+    int num, res;
+
     printf("Digite um número: ");
     scanf("%d", &num);
-    verificar_num(num);
+
+    res = verificar_num(num);
+    printf("%d \n", res);
 
     return (EXIT_SUCCESS);
 }

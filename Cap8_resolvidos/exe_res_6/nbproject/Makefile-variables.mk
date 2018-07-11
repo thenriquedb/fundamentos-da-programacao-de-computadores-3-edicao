@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=exr_res_6
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/exr_res_6
+CND_ARTIFACT_NAME_Debug=exe_res_6
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/exe_res_6
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=exrres6.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/exrres6.tar
+CND_PACKAGE_NAME_Debug=exeres6.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/exeres6.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=exr_res_6
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/exr_res_6
+CND_ARTIFACT_NAME_Release=exe_res_6
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/exe_res_6
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=exrres6.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/exrres6.tar
+CND_PACKAGE_NAME_Release=exeres6.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/exeres6.tar
 #
 # include compiler specific variables
 #

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=exr_res_6
+PROJECTNAME=exe_res_6
 
 # Active Configuration
 DEFAULTCONF=Debug
