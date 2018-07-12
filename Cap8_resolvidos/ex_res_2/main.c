@@ -7,20 +7,25 @@ torne a soma dos N números inteiros existentes entre eles.
 #include <stdlib.h>
 
 int Soma(int a, int b) {
-    int soma = a+b;
-    printf("Soma: %d \n",soma);
+    int i, soma = 0;
+
+    for (i = a + 1; i < b; i++) {
+        soma += i;
+    }
+    return soma;
 }
 
 int main(int argc, char** argv) {
-    int x,y;
-    
+    int x, y, s;
+
     printf("Número 1: ");
-    scanf("%d",&x);
+    scanf("%d", &x);
+    
     printf("Número 2: ");
-    scanf("%d",&y);
-    
-    Soma(x,y);
-    
+    scanf("%d", &y);
+
+    printf("A soma dos números entre %d e %d é %d. \n", x, y, Soma(x, y));
+
     return (EXIT_SUCCESS);
 }
 

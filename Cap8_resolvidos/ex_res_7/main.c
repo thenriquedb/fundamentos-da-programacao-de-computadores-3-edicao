@@ -9,26 +9,26 @@ ao programa principal para, então, ser mostrada.
 #include <stdlib.h>
 
 float CalculoMedias(float nota1, float nota2, float nota3, char opcao) {
-    float mediaA, mediaP;
+    float media;
 
     switch (opcao) {
 
         //Calcular a média simples
         case 'a':
-            mediaA = (nota1 + nota2 + nota3) / 3;
-            printf("\nA media aritimética das notas é de %.2f pontos. \n", mediaA);
+            media = (nota1 + nota2 + nota3) / 3;
             break;
 
         //Calcular a media ponderada (com pesos 5, 3 e 2)
         case 'p':
-            mediaP = ((nota1 * 5)+(nota2 * 3)+(nota3 * 2)) / 10;
-            printf("\nA media ponderada das notas é de %.2f pontos. \n", mediaP);
+            media = ((nota1 * 5)+(nota2 * 3)+(nota3 * 2)) / 10;
             break;
 
         default:
             printf("Opção inválida \n");
             break;
     }
+
+    return media;
 }
 
 int main(int argc, char** argv) {
@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
     printf("Digite a opçcão desejada: ");
     scanf(" %c", &opc);
 
-    CalculoMedias(n1, n2, n3, opc);
+    printf("\nMedia das notas: %.2f \n", CalculoMedias(n1, n2, n3, opc));
 
     return (EXIT_SUCCESS);
 }

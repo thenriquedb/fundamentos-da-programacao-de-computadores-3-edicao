@@ -12,24 +12,20 @@ havendo variáveis globais.
 #include <stdio.h>
 #include <stdlib.h>
 
-int ConverterSegundos(int seg) {
-    int hr, min, segundos, res;
+void ConverterSegundos(int seg) {
+    
+    int hr = (seg / 60) / 60; //Calculo das horas
+    int min = (seg / 60) % 60; //Calculo dos minutos
+    int segundos = seg % 60; //Calculo dos segundos
 
-    hr = (seg / 60) / 60; //Calculo das horas
-    min = (seg/60) % 60; //Calculo dos minutos
-    segundos = seg % 60; //Calculo dos segundos
-
-    printf("Hora: %d  \n", hr);
-    printf("Minutos: %d \n", min);
-    printf("Segundos: %d \n", segundos);
+    printf("%d : %d : %d \n", hr, min, segundos);
 }
 
 int main(int argc, char** argv) {
-    int segundos;
+    int segundos, horario[3];
 
     printf("Digite os segundos: ");
     scanf("%d", &segundos);
-
     ConverterSegundos(segundos);
 
     return (EXIT_SUCCESS);

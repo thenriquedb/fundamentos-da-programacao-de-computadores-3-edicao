@@ -12,7 +12,7 @@ int verificar_num(int x) {
     } else {
         return 0;
     }
-0}
+}
 
 int main(int argc, char** argv) {
     int num, res;
@@ -20,8 +20,8 @@ int main(int argc, char** argv) {
     printf("Digite um número: ");
     scanf("%d", &num);
 
-    res = verificar_num(num);
-    printf("%d \n", res);
+    res = 
+    printf("%d \n", res = verificar_num(num));
 
     return (EXIT_SUCCESS);
 }

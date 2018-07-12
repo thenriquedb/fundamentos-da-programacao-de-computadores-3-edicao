@@ -14,10 +14,9 @@ principal.
  */
 
 float CalculoPercentual(float VAntigo, float VAtual) {
-    float percentual;
+    float percentual = ((VAtual - VAntigo) / VAntigo)*100;
+    return percentual;
 
-    percentual = ((VAtual - VAntigo) / VAntigo)*100;
-    printf("\nPercentual de aumento foi de %.2f%%. \n", percentual);
 }
 
 int main(int argc, char** argv) {
@@ -29,7 +28,8 @@ int main(int argc, char** argv) {
     printf("Valor atual: ");
     scanf("%f", &ValorAtual);
 
-    CalculoPercentual(ValorAntigo, ValorAtual);
+
+    printf("\nPercentual de aumento foi de %.2f%%. \n", CalculoPercentual(ValorAntigo, ValorAtual));
 
     return (EXIT_SUCCESS);
 }
