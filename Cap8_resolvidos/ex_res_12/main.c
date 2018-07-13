@@ -6,10 +6,22 @@ de 6 são 1, 2 e 3, e 1 + 2 + 3 = 6, logo 6 é perfeito.
 
 #include <stdio.h>
 #include <stdlib.h>
+int NumerosPerfeitos(int *vetor);
 
-void NumerosPerfeitos() {
+int main(int argc, char** argv) {
+    int i, vetor[3];
+    NumerosPerfeitos(&vetor);
+
+    for (i = 0; i < 3; i++) {
+        printf("RES[%d] = %d \n", i, vetor[i]);
+    }
+
+    return (EXIT_SUCCESS);
+}
+
+int NumerosPerfeitos(int *vetor) {
     int soma = 0, num = 1;
-    int i, cont = 0;
+    int i, c = 0;
 
     do {
         //Laço para somar os divisores de cada numero
@@ -18,21 +30,15 @@ void NumerosPerfeitos() {
                 soma += i;
             }
         }
-        
+
         //Irá verificar se a soma é igual ao numéro
         if (soma == num) {
-            printf("%d \n", num);
-            cont++;
+            vetor[c] = soma;
+            c++;
         }
-        
+
         num++;
         soma = 0;
-    } while (cont != 3);
+
+    } while (c != 3);
 }
-
-int main(int argc, char** argv) {
-
-    NumerosPerfeitos();
-    return (EXIT_SUCCESS);
-}
-

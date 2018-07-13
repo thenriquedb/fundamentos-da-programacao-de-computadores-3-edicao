@@ -5,39 +5,40 @@ números ordenados de forma crescente.
 
 #include <stdio.h>
 #include <stdlib.h>
+#define TAM 5
+
+void Ordenar_Vetor(float *vetor);
 
 int main(int argc, char** argv) {
-    int TAM = 5;
-    int i, vet[TAM];
+    int i;
+    float vet[TAM];
 
     for (i = 0; i < TAM; i++) {
         printf("V[%d]: ", i);
-        scanf("%d", &vet[i]);
+        scanf("%f", &vet[i]);
     }
 
-    void OrdenarVetor(int vetor[], int T);
-    OrdenarVetor(vet, TAM);
+    Ordenar_Vetor(&vet);
+
+    printf("\nVetor ordenado em ordem crescente: ");
+    for (i = 0; i < TAM; i++) {
+        printf("%.2f ", vet[i]);
+    }
 
     return (EXIT_SUCCESS);
 }
 
-void OrdenarVetor(int vetor[], int T) {
-    int i, j, aux;
+void Ordenar_Vetor(float *vetor) {
+    int i, j;
+    float aux;
 
-    //Método bublle sort
-    for (i = 0; i < T; i++) {
-        for (j = i + 1; j < T; j++) 
-        {
+    for (i = 0; i < TAM; i++) {
+        for (j = i + 1; j < TAM; j++) {
             if (vetor[i] > vetor[j]) {
                 aux = vetor[i];
                 vetor[i] = vetor[j];
                 vetor[j] = aux;
             }
         }
-    }
-
-    printf("\nVetor organizado: \n");
-    for (i = 0; i < T; i++) {
-        printf("%d ", vetor[i]);
     }
 }

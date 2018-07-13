@@ -5,14 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 #define DIM 5
+
+int SomaMatriz(int mat[][DIM]);
 
 int main(int argc, char** argv) {
     int i, j, matriz[DIM][DIM];
     srand(time(NULL));
-
-    void SomaMatriz(int mat[][DIM]);
 
     for (i = 0; i < DIM; i++) {
         for (j = 0; j < DIM; j++) {
@@ -22,20 +21,21 @@ int main(int argc, char** argv) {
         printf("\n");
     }
 
-    SomaMatriz(matriz);
-
+    printf("\nA soma dos elementos da matriz é %d. \n", SomaMatriz(matriz));
+     
     return (EXIT_SUCCESS);
 }
 
 //Para usar matriz como parámentro basta informar uma dimensão
-void SomaMatriz(int mat[][DIM]) {
-    int i,j,soma = 0;
-    
+int SomaMatriz(int mat[][DIM]) {
+    int i, j, soma = 0;
+
     for (i = 0; i < DIM; i++) {
         for (j = 0; j < DIM; j++) {
             soma += mat[i][j];
         }
     }
-    printf("\nA soma dos elementos da matriz é %d. \n",soma);
+
+    return soma;
 }
 

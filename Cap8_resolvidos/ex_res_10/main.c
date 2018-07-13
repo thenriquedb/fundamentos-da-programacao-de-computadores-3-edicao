@@ -20,7 +20,7 @@ float CalculoExpressao(int N) {
         S += num / fat;
     }
     
-    printf("S: %.20lf \n", S); //lf é usado para imprimir variaveis do tipo double | e 20 é numero de casas apos a virgula
+    return S;
 }
 
 int main(int argc, char** argv) {
@@ -29,8 +29,8 @@ int main(int argc, char** argv) {
     printf("Digite um valor para N: ");
     scanf("%d", &N);
 
-    CalculoExpressao(N);
-
+    printf("S: %.20lf \n", CalculoExpressao(N)); //lf é usado para imprimir variaveis do tipo double | e 20 é numero de casas apos a virgula
+    
     return (EXIT_SUCCESS);
 }
 
