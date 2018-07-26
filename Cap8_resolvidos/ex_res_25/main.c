@@ -9,29 +9,33 @@ valores negativos de A por zero. O vetor resultante deverá ser mostrado no prog
 
 #define TAM 25
 
+void SubstituirValores(int *vetor, int T);
+
 int main(int argc, char** argv) {
     int i, vet[TAM];
-    void SubstituirValores(int vetor[], int T);
+    srand(time(NULL));
 
     printf("Vetor: ");
     for (i = 0; i < TAM; i++) {
         printf("%d | ", vet[i] = (rand() % 50) - 25);
     }
 
-    SubstituirValores(vet, TAM);
+    SubstituirValores(&vet, TAM);
 
+    printf("\n\nVetor alterado: ");
+    for (i = 0; i < TAM; i++) {
+        printf("%d |", vet[i]);
+    }
+    printf("\n");
     return (EXIT_SUCCESS);
 }
 
-void SubstituirValores(int vetor[], int T) {
+void SubstituirValores(int *vetor, int T) {
     int i;
 
-    printf("\n\nVetor resultante: ");
     for (i = 0; i < T; i++) {
         if (vetor[i] < 0) {
             vetor[i] = 0;
         }
-        printf("%d | ", vetor[i]);
     }
-    printf("\n");
 }

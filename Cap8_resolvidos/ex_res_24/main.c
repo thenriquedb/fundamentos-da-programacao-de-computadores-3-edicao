@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     int n1, n2;
     char sinal;
 
-    void Calculadora(int x, char operacao, int y);
+    int Calculadora(int x, char operacao, int y);
 
     printf("Calculadora Simples \n\n");
 
@@ -25,28 +25,25 @@ int main(int argc, char** argv) {
     printf("2º valor: ");
     scanf("%d", &n2);
 
-    Calculadora(n1, sinal, n2);
+    printf("R = %d \n", Calculadora(n1, sinal, n2));
 
     return (EXIT_SUCCESS);
 }
 
-void Calculadora(int x, char operacao, int y) {
-    int soma, sub, mult;
+int Calculadora(int x, char operacao, int y) {
+    int res;
 
     switch (operacao) {
         case '+':
-            soma = x + y;
-            printf("\n%d + %d = %d \n", x, y, soma);
+            res = x + y;
             break;
 
         case '-':
-            sub = x - y;
-            printf("\n%d - %d = %d \n", x, y, sub);
+            res = x - y;
             break;
 
         case '*':
-            mult = x * y;
-            printf("\n%d * %d = %d \n", x, y, mult);
+            res = x * y;
             break;
 
         default:
@@ -54,4 +51,5 @@ void Calculadora(int x, char operacao, int y) {
             break;
     }
 
+    return res;
 }

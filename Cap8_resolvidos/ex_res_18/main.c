@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     int i, j, matriz[DIM][DIM];
     srand(time(NULL));
 
-    void Menor_Elemento_DiagSecundaria(int mat[][DIM]);
+    int Menor_Elemento_DiagSecundaria(int mat[][DIM]);
 
     for (i = 0; i < DIM; i++) {
         for (j = 0; j < DIM; j++) {
@@ -23,33 +23,33 @@ int main(int argc, char** argv) {
         printf("\n");
     }
 
-    Menor_Elemento_DiagSecundaria(matriz);
-    
+    printf("\nMenor elemento da diagonal secundária é %d. \n", Menor_Elemento_DiagSecundaria(matriz));
+            
     return (EXIT_SUCCESS);
 }
 
-void Menor_Elemento_DiagSecundaria(int mat[][DIM]) {
+int Menor_Elemento_DiagSecundaria(int mat[][DIM]) {
     int i, j, DiagSecundaria[DIM];
     int p = 0;
 
     for (i = 0; i < DIM; i++) {
         for (j = 0; j < DIM; j++) {
-            if (i+j == (DIM - 1)) {
+            if (i + j == (DIM - 1)) {
                 //Os valores da diagonal secundaria será armazenado em um vetor
                 DiagSecundaria[p] = mat[i][j];
                 p++;
             }
         }
     }
-    
+
     //Laço para pegar o menor valor da diagonal secundária
-    int menor= DiagSecundaria[0]; 
+    int menor = DiagSecundaria[0];
     for (i = 0; i < p; i++) {
-        if(DiagSecundaria[i] < menor) {
+        if (DiagSecundaria[i] < menor) {
             menor = DiagSecundaria[i];
         }
     }
-    
-    printf("\nO menor valor da diagonal secundária é %d. \n",menor);
+
+    return menor;
 
 }
