@@ -5,23 +5,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int CalculoFatorial(int n);
+
 int main(int argc, char** argv) {
     int num;
 
-    void CalculoFatorial(int n);
-
     printf("Digite um número: ");
     scanf("%d", &num);
-    CalculoFatorial(num);
+
+    printf("Fatorial de %d = %d \n", num, CalculoFatorial(num));
 
     return (EXIT_SUCCESS);
 }
 
-void CalculoFatorial(int n) {
+int CalculoFatorial(int n) {
     int i, fat = 1;
 
     for (i = 1; i <= n; i++) {
         fat *= i;
     }
-    printf("Fatorial de %d: %d \n", n, fat);
+    return fat;
 }

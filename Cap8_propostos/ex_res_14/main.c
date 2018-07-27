@@ -10,41 +10,53 @@ mentos menores ou iguais a zero.
 
 #define TAM 30
 
+void Separar_Valores_Positivos_e_Negativos(int *vetor, int *positivos, int *negativos, int *Tamanho);
+
 int main(int argc, char** argv) {
     int i, vet[TAM];
+    int Positivos[TAM], Negativos[TAM], Tamanho[2];
+
     srand(time(NULL));
-    void Separar_Valores_Positivos_e_Negativos(int vetor[], int T);
 
     printf("Vetor: ");
-    for (i = 0; i < TAM; i++) {
+    for (i = 0; i < TAM; i++) {+
         printf("%d | ", vet[i] = (rand() % 60) - 30);
     }
-    Separar_Valores_Positivos_e_Negativos(vet, TAM);
+
+    Separar_Valores_Positivos_e_Negativos(&vet, &Positivos, &Negativos, &Tamanho);
+
+    printf("\n\nNuméros positivos: ");
+    for (i = 0; i < Tamanho[0]; i++) {
+        printf("%d | ",Positivos[i]);
+    }
+    
+    printf("\n\nNuméros negativos: ");
+    for (i = 0; i < Tamanho[1]; i++) {
+        printf("%d | ",Negativos[i]);
+    }
+    
+    printf("\n");
 
     return (EXIT_SUCCESS);
 }
 
-void Separar_Valores_Positivos_e_Negativos(int vetor[], int T) {
-    int positivos[T], negativos[T], P = 0, P1 = 0;
-    int i;
+void Separar_Valores_Positivos_e_Negativos(int *vetor, int *positivos, int *negativos, int *Tamanho) {
+    int i, PP = 0, PN = 0;
 
-    for (i = 0; i < T; i++) {
-        if (vetor[i] <= 0) {
-            negativos[P] = vetor[i];
-            P++;
+    for (i = 0; i < TAM; i++) {
+        if (vetor[i] > 0) {
+            positivos[PP] = vetor[i];
+            PP++;
         } else {
-            positivos[P1] = vetor[i];
-            P1++;
+            negativos[PN] = vetor[i];
+            PN++;
         }
     }
+
+    /* Como não é possivel retornar mais de um valor em uma função, armazenei a 
+     quantidade de números positvos em um vetor de 2 posições onde a primeira é 
+     os valores positvos e a segunda os numeros positivos.*/
     
-    printf("\n\nValores positivos: ");
-    for (i = 0; i < P1; i++) {
-        printf("%d | ", positivos[i]);
-    }
-    printf("\nValores negativos: ");
-    for (i = 0; i < P; i++) {
-        printf("%d | ", negativos[i]);
-    }
-    printf("\n");
+    Tamanho[0] = PP;
+    Tamanho[1] = PN;
 }

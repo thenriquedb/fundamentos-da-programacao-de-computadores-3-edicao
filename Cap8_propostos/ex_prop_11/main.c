@@ -8,19 +8,21 @@ de parcelas de uma soma S, calculada pela fórmula:
 #include <stdio.h>
 #include <stdlib.h>
 
+float CalculoExpressao(int n);
+
 int main(int argc, char** argv) {
     int n;
-    void CalculoExpressao(int n);
 
     printf("Digite um valor para N: ");
     scanf("%d", &n);
 
-    CalculoExpressao(n);
+    printf("S = %.4f \n", CalculoExpressao(n)
+            );
 
     return (EXIT_SUCCESS);
 }
 
-void CalculoExpressao(int n) {
+float CalculoExpressao(int n) {
     float i, x = 1, num, den, S = 0;
 
     for (i = 1; i <= n; i++) {
@@ -28,5 +30,5 @@ void CalculoExpressao(int n) {
         den = i + 3;
         S += num / den;
     }
-    printf("\nS = %.4f \n", S);
+    return S;
 }

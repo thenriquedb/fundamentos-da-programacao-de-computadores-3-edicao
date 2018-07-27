@@ -6,7 +6,7 @@ tica desses valores. Terminar a entrada de dados com o valor zero.
 #include <stdio.h>
 #include <stdlib.h>
 
-void MediaAritimetica() {
+float MediaAritimetica() {
     float num, soma = 0, media;
     int cont = 0;
   
@@ -20,10 +20,12 @@ void MediaAritimetica() {
     } while (num != 0);
     
     media = soma / cont;
-    printf("\nMedia dos valores digitados: %.2f. \n", media);
+    return media;
+  
 }
 
 int main(int argc, char** argv) {
-    MediaAritimetica();
+    
+      printf("\nMedia dos valores digitados: %.2f. \n", MediaAritimetica());
     return (EXIT_SUCCESS);
 }

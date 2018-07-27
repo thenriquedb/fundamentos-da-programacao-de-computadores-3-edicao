@@ -6,26 +6,28 @@ dos elementos de X.
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAM 20
+#define TAM 5
+
+float SomaVetor(float vetor[], int T);
+
 int main(int argc, char** argv) {
     float vet[TAM];
     int i;
 
-    void SomaVetor(float vetor[], int T);
-
     printf("Vetor: \n");
     for (i = 0; i < TAM; i++) {
-        printf("V[%d]: ",i);
-        scanf("%f",&vet[i]);
+        printf("V[%d]: ", i);
+        scanf("%f", &vet[i]);
     }
-    SomaVetor(vet,TAM);
+
+    printf("\nA soma dos elementos do vetor é: %.2f. \n", SomaVetor(vet, TAM));
 }
 
-void SomaVetor(float vetor[], int T) {
+float SomaVetor(float vetor[], int T) {
     float soma = 0;
     int i;
-        for (i = 0; i < TAM; i++) {
-            soma += vetor[i];
-        }
-    printf("\nA soma dos elementos do vetor é: %.2f. \n",soma);
+    for (i = 0; i < TAM; i++) {
+        soma += vetor[i];
+    }
+    return soma;
 }
