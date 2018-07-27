@@ -10,7 +10,6 @@ principal.
 #define LIN 3
 #define COL 4
 
-
 //Função para prencher matriz
 void PrencherMatriz(float matriz[][COL]);
 
